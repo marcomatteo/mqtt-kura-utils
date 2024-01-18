@@ -121,5 +121,5 @@ if __name__=='__main__':
             logger.exception(f"Failed to publish the message n°{i}!")
         
         logger.info(f"{info.is_published()}")
-        time.sleep(0.005)
+        time.sleep(1)
 

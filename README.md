@@ -2,15 +2,28 @@
 This repository have some basic utility scripts for testing MQTT messages between Kura and Kapua.
 
 The connection to the broker is not with TLS, it may will be added in feature developments.
-The MQTT credentials are usually stored locally in a _config.ini_ file. 
 
-The file structure is like the following:
+## Setup
+
+To execute the scripts in an identical environment:
+
+1) Install Miniconda from the [online documentation](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
+
+2) Create the mqtt environment: 
+    `$ conda create --name mqtt --file requirements.txt`
+
+
+## MQTT credentials
+
+The MQTT credentials must be stored locally in a _config.ini_ file: 
+
+Create a `config.ini` file with the following properties:
 
 ```
 [MQTTSection]
-mqtt.url=url
+mqtt.url=broker-sbx.test.io
 mqtt.clientid=clientid
 mqtt.user=user
 mqtt.password=password
-mqtt.topic=topic
+mqtt.topic=account/clientid/test
 ```
