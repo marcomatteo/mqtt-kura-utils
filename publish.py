@@ -120,7 +120,6 @@ if __name__=='__main__':
             info = mqtt_client.publish(mqtt_topic, message, qos=0, retain=False)
         except Exception as e:
             logger.exception(f"Failed to publish the message n°{i}!")
-        
-        logger.info(f"Is the message published? {info.is_published()}")
+    
         time.sleep(1)
 

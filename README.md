@@ -53,14 +53,14 @@ python publish.py --metric test_string --msg "Test" --num 10
 
 Messages:
 ```
-This is a message-0
-This is a message-1
-This is a message-2
-This is a message-3
-This is a message-4
-This is a message-5
-This is a message-6
-This is a message-7
-This is a message-8
-This is a message-9
+Test-0
+Test-1
+Test-2
+Test-3
+Test-4
+Test-5
+Test-6
+Test-7
+Test-8
+Test-9
 ```
