@@ -10,10 +10,22 @@ To execute the scripts in an identical environment:
 1) Install Miniconda from the [online documentation](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
 
 2) Create the mqtt environment from a `linux-64` only machine: 
-    `$ conda create --name mqtt --file requirements.txt`
+
+    ```
+    conda create --name mqtt --file requirements.txt
+    ```
 
     Or from a generic machine with:
-    `$ conda env create -f conda_mqtt_env.yml`
+    
+    ```
+    conda env create -f conda_mqtt_env.yml
+    ```
+
+3) Activate the environment created:
+
+    ```
+    conda activate mqtt
+    ```
 
 ## MQTT credentials
 
