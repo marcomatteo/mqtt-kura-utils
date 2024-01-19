@@ -108,18 +108,19 @@ if __name__=='__main__':
     metric_name = args.metric
     n = args.num
 
-    logger.info(f"Publishing to {mqtt_topic} topic")
     for i in range(n):
-        message_metric = "metric_name"
         message_payload = msg + '-' + str(i)
-        message = build_msg(message_metric,message_payload).SerializeToString()
-        logger.info("Trying to publish message:")
-        logger.info(f"{message_metric}: {message_payload}")
+        message = build_msg(metric_name,message_payload).SerializeToString()
+        
+        logger.info(f"Trying to publish message to {mqtt_topic} topic:")
+        logger.info(f"metric name: {metric_name}")
+        logger.info(f"metric value: {message_payload}")
+        
         try:
             info = mqtt_client.publish(mqtt_topic, message, qos=0, retain=False)
         except Exception as e:
             logger.exception(f"Failed to publish the message n°{i}!")
         
-        logger.info(f"{info.is_published()}")
+        logger.info(f"Is the message published? {info.is_published()}")
         time.sleep(1)
 

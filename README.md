@@ -41,3 +41,26 @@ mqtt.user=user
 mqtt.password=password
 mqtt.topic=account/clientid/test
 ```
+
+## Usage
+
+The `publish.py` script is intended to be used only for testing the MQTT broker endpoint publishing auto generated messages every second.
+
+Run the script with the following properties to send ten unique text messages:
+```
+python publish.py --metric test_string --msg "Test" --num 10
+```
+
+Messages:
+```
+This is a message-0
+This is a message-1
+This is a message-2
+This is a message-3
+This is a message-4
+This is a message-5
+This is a message-6
+This is a message-7
+This is a message-8
+This is a message-9
+```
