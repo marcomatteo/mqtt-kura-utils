@@ -7,9 +7,14 @@ The connection to the broker is not with TLS, it may will be added in feature de
 
 To execute the scripts in an identical environment:
 
-1) Install Miniconda from the [online documentation](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
+1) Download the repo
+    ```
+    git clone https://github.com/marcomatteo/mqtt-kura-utils.git 
+    ```
 
-2) Create the mqtt environment from a `linux-64` only machine: 
+3) Install Miniconda from the [online documentation](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
+
+4) Access the folder of the repo and create the mqtt environment from a `linux-64` only machine: 
 
     ```
     conda create --name mqtt --file requirements.txt
@@ -21,7 +26,7 @@ To execute the scripts in an identical environment:
     conda env create -f conda_mqtt_env.yml
     ```
 
-3) Activate the environment created:
+5) Activate the environment created:
 
     ```
     conda activate mqtt
